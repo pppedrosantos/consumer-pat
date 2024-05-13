@@ -13,6 +13,7 @@ public class ExtractMapper {
                 .cardNumber(consumerPaymentDTO.getCardNumber())
                 .amount(consumerPaymentDTO.getAmount())
                 .dateBuy(consumerPaymentDTO.getDateBuy())
+                .productDescription(consumerPaymentDTO.getProductDescription())
                 .establishmentName(consumerPaymentDTO.getEstablishmentName())
                 .establishmentNameId(consumerPaymentDTO.getEstablishmentNameId())
                 .build();

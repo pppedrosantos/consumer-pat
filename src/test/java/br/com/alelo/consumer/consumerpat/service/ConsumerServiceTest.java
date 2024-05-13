@@ -72,6 +72,7 @@ public class ConsumerServiceTest {
 
     @Test
     public void testUpdateConsumer_Success() {
+
         // Arrange
         Integer id = 1;
         ConsumerUpdateDTO requestBody = new ConsumerUpdateDTO();
