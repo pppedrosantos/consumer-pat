@@ -1,5 +1,7 @@
 package br.com.alelo.consumer.consumerpat.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,54 +11,30 @@ import java.util.Date;
 @Data
 @Entity
 @NoArgsConstructor
+@Builder
+@AllArgsConstructor
 public class Extract {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    int id;
+    private int id;
 
     @Column
-    int establishmentNameId;
+    private int establishmentNameId;
 
     @Column
-    String establishmentName;
+    private String establishmentName;
 
     @Column
-    String productDescription;
+    private String productDescription;
 
     @Column
-    Date dateBuy;
+    private Date dateBuy;
 
     @Column
-    int cardNumber;
+    private String cardNumber;
 
     @Column
-    double amount;
-
-    public Extract(int id, int establishmentNameId, String establishmentName, String productDescription, Date dateBuy, int cardNumber, double amount) {
-        this.id = id;
-        this.establishmentNameId = establishmentNameId;
-        this.establishmentName = establishmentName;
-        this.productDescription = productDescription;
-        this.dateBuy = dateBuy;
-        this.cardNumber = cardNumber;
-        this.amount = amount;
-    }
-
-    public Extract( String productDescription, Date dateBuy, int cardNumber, double amount) {
-        this.productDescription = productDescription;
-        this.dateBuy = dateBuy;
-        this.cardNumber = cardNumber;
-        this.amount = amount;
-    }
-
-    public Extract(String establishmentName, String productDescription, Date dateBuy, int cardNumber, double amount) {
-        this.establishmentNameId = establishmentNameId;
-        this.establishmentName = establishmentName;
-        this.productDescription = productDescription;
-        this.dateBuy = dateBuy;
-        this.cardNumber = cardNumber;
-        this.amount = amount;
-    }
+    private double amount;
 
 }
